@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage   xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="MasterDetailDemo.Menu" Title="Master">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" Padding="0">
+            <ContentPage.Content>
+                <StackLayout>
+                    <Grid BackgroundColor="#03A9F4">
+                      <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                      </Grid.ColumnDefinitions>
+                      <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                      </Grid.RowDefinitions>
+                      <Label
+                          Grid.Column="1"
+                          Grid.Row="2"
+                          Text="App Name"
+                          TextColor="White" FontSize="Large"/>
+                    </Grid>
+
+                    <TableView Intent="Menu">
+                        <TableSection>
+                            <ViewCell Tapped="GoPage1">
+                                <StackLayout Padding="15,10">
+                                    <Label Text="Page 1" VerticalTextAlignment="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+
+                            <ViewCell Tapped="GoPage2">
+                                <StackLayout Padding="15,10">
+                                    <Label Text="Page 2" VerticalTextAlignment="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+
+                            <ViewCell Tapped="GoPage3">
+                                <StackLayout Padding="15,10">
+                                    <Label Text="Page 3" VerticalTextAlignment="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                    </TableView>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>
